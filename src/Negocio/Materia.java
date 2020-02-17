@@ -48,4 +48,11 @@ public class Materia {
         this.atrCreditos = parCreditos;
     }
 
+    @Override
+    public String toString() {
+        return getAtrNombre();
+    }
+    
+    
+
 }

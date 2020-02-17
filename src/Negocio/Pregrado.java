@@ -5,6 +5,8 @@
  */
 package Negocio;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author usuario
@@ -14,9 +16,11 @@ public class Pregrado extends Estudiante{
     private String atrSemestre;
 
     public Pregrado() {
+        super();
     }
 
-    public Pregrado(String parSemestre) {
+    public Pregrado(String parSemestre,String parId, String parContrasenya, int parCodigo, String parNombre) {
+        super(parId, parContrasenya, parCodigo, parNombre);
         this.atrSemestre = parSemestre;
     }
 
@@ -32,6 +36,19 @@ public class Pregrado extends Estudiante{
      */
     public void setAtrSemestre(String parSemestre) {
         this.atrSemestre = parSemestre;
+    }
+    
+    /**
+     * @param parMateria the atrMaterias to set
+     */
+    @Override
+    public void setAtrMaterias(Materia parMateria) {
+        this.atrMaterias.add(parMateria);
+    }
+    
+    @Override
+    public ArrayList<Materia> getAtrMaterias() {
+        return this.atrMaterias;
     }
     
 }

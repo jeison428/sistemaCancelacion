@@ -9,7 +9,7 @@ package Negocio;
  *
  * @author usuario
  */
-public class Usuario {
+public abstract class Usuario {
     
     private String atrId;
     private String atrContrasenya;

@@ -11,12 +11,16 @@ import java.util.ArrayList;
  *
  * @author usuario
  */
-public class Estudiante extends Usuario{
+public abstract class Estudiante extends Usuario{
     
-    private int atrFaltas;
-    private ArrayList<Materia> atrMaterias;
+    protected int atrFaltas;
+    protected ArrayList<Materia> atrMaterias;
 
     public Estudiante() {
+    }
+
+    public Estudiante(String parId, String parContrasenya, int parCodigo, String parNombre) {
+        super(parId, parContrasenya, parCodigo, parNombre);
         this.atrFaltas = 0;
         this.atrMaterias = new ArrayList<>();
     }
@@ -24,14 +28,14 @@ public class Estudiante extends Usuario{
     /**
      * @return the atrFaltas
      */
-    public int getAtrFaltas() {
+    protected int getAtrFaltas() {
         return atrFaltas;
     }
 
     /**
      * @param parFaltas the atrFaltas to set
      */
-    public void setAtrFaltas(int parFaltas) {
+    protected void setAtrFaltas(int parFaltas) {
         this.atrFaltas = parFaltas;
     }
 
